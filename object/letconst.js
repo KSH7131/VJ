@@ -16,8 +16,27 @@ const family = {
     ]
   }
 
-  console.log(family.familysite[0].atext, family.familysite[0].href);
+  let familytag = "";
 
-  const mytag = `<a href="${family.familysite[0].href}">${family.familysite[0].atext}</a>`;
+  for(x of family.familysite){
+    familytag += `<li>$(x.atext)</li>`
+  }
   
-  console.log(mytag);
+  window.addEventListener('load', function(){
+    this.document.querySelector("#family h2")
+    .innerHTML = family.d1text;
+
+    this.document.querySelector("#family ul")
+    .innerHTML = familytag
+  })
+  
+  // {
+  //   this.document.querySelector("#family h2").innerHTML += family.d1text;
+  //   // 특정 태그 안에 태그를 삽입하기
+  //   this.document.querySelector("#family ul")
+  //   .innerHTML = `<li>$(family.familysite[0].atext)</li>`;
+  //   this.document.querySelector("#family ul")
+  //   .innerHTML = `<li>$(family.familysite[1].atext)</li>`;
+  //   this.document.querySelector("#family ul")
+  //   .innerHTML = `<li>$(family.familysite[2].atext)</li>`;
+  // })
