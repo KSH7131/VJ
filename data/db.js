@@ -13,6 +13,16 @@ const family = {
       atext: "Figma",
       href: "http://www.figma.com/gimsh7131"
     },
+
+    {
+      atext: "Figma",
+      href: "http://www.figma.com/gimsh7131"
+    },
+
+    {
+      atext: "Figma",
+      href: "http://www.figma.com/gimsh7131"
+    },
   ]
 }
 
