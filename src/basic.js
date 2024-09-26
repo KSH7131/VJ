@@ -14,4 +14,9 @@ for(x of family.familysite){
 
   this.document.querySelector("#family ul").innerHTML = familylist;
 
+  // 패밀리노출
+  this.document.querySelector("#family").addEventListener('click', function(){
+    this.classList.toggle('open');
+  })
+
 })
