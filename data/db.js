@@ -25,8 +25,8 @@ const family = {
 const mynavi = [
   {
     title: {
-      text: "첫번째",
-      link: "" 
+      text: "나의 소개 페이지",
+      link: "#about" 
     },
     submenus: [
       { text: "소메뉴", link: "" }, 

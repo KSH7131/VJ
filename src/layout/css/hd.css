@@ -20,7 +20,6 @@
   color: black;
 }
 #hd .inner nav > ul:before {
-  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -109,4 +108,20 @@ body.slide-0 #mainBanner .swiper-slide,
 body.slide-1 #mainBanner .swiper-slide,
 body.slide-2 #mainBanner .swiper-slide {
   color: white !important;
+}
+
+body #family {
+  transform: translateX(150%);
+  transition: 0.5s;
+}
+body.scrolldown #hd {
+  background-color: white !important;
+  border-bottom: 1px solid #ccc;
+}
+body.scrolldown #hd a {
+  color: black !important;
+  padding: 10px 1rem;
+}
+body.scrolldown #family {
+  transform: translateX(0%);
 }

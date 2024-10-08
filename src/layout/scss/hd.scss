@@ -36,7 +36,7 @@
       > ul {
         &:before {
           // 네비게이션 백배경
-          content: "";
+          // content: "";
           display: block;
           position: absolute;
           left: 0;
@@ -171,6 +171,27 @@ body.slide-2{
   #mainBanner{
     .swiper-slide{
       color: white !important;
+    }
+  }
+}
+
+body{
+  #family{
+    transform: translateX(150%);
+    transition: 0.5s;
+  }
+
+  &.scrolldown{
+    #hd{
+      background-color: white !important;;
+      border-bottom: 1px solid #ccc;
+      a{
+        color: black !important;
+        padding: 10px 1rem;
+      }
+    }
+    #family{
+      transform: translateX(0%);
     }
   }
 }
