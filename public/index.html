@@ -4,17 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>셀렉트형 네비 구현하기</title>
+  <!-- 폰트 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- 초기화 및 그리드 시스템 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- 플러그인 -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
+   <!-- 커스터마이징 -->
+    <!-- 상단, 하단, 퀵, 팝업 -->
+  <link rel="stylesheet" href="../src/layout/css/common.css">
+  <link rel="stylesheet" href="../src/layout/css/hd.min.css">
+  <link rel="stylesheet" href="../src/layout/css/ft.min.css">
+
+  <!-- 개별페이지 -->
+  <link rel="stylesheet" href="../src/layout/css/main.min.css">
+
+<!-- e데이터베이스 -->
   <script src="../data/db.js"></script>
-  <script src="../src/basic.js"></script>
+  <!-- 데이터베이스를 화면에 연동출력 -->
+  <script src="../src/api/navi.js"></script>
+  <!-- 플러그인 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-  <link rel="stylesheet" href="../src/layout.css" />
+  <!-- ui js -->
+  <script src="../src/layout/js/common.js"></script>
+
+  <!-- index page -->
+  <script src="../src/layout/js/page_main.js"></script>
+
 </head>
-<body>
-  <div id="family">
-    <h2></h2>
-    <ul>
+<body class="slide-0">
 
-    </ul>
+<!-- 메뉴 폰트 프리텐다드, 크기 22px 두께 400, 언더라인 없음, 글자색 검정, hover 시에 오렌지색 -->
+
+  <header id="hd" class="fixed-top border-bottom">
+    <div class="inner container-fluid d-flex  justify-content-between align-items-center">
+      <h1 class="mb-0">
+        <a href="" class="d-block logo">
+          <span class="visually-hidden">나의 소개페이지</span>
+        </a>
+      </h1>
+      <button id="hd_allBtn_ksh" class="d-lg-none  bg-transparent">      
+        <span class="visually-hidden">전체메뉴</span>
+      </button>
+      <nav class="d-none d-lg-block start-0 top-100 end-0" id="navi">
+        <ul class="d-lg-flex ps-0 mb-0 h-100">
+          <li class="position-relative">
+            <a href="" class="d-block text-nowrap">정적객체태그</a>
+            <div class="position-absolute start-0">
+              <ul class="ps-0">
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="position-relative">
+            <a href="" class="d-block px-lg-5">대메뉴</a>
+            <div class="position-absolute">
+              <ul class="ps-0">
+                <li><a href="" class="text-nowrap">찾아오는길</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="position-relative">
+            <a href="" class="d-block px-lg-5">대메뉴</a>
+            <div class="position-absolute">
+              <ul class="ps-0">
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="position-relative">
+            <a href="" class="d-block px-lg-5">대메뉴</a>
+            <div class="position-absolute">
+              <ul class="ps-0">
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="position-relative">
+            <a href="" class="d-block px-lg-5">대메뉴</a>
+            <div class="position-absolute">
+              <ul class="ps-0">
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+                <li><a href="" class="text-nowrap">소메뉴</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 스와이퍼 배너 -->
+   <section id="mainBanner" >
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide vh-100 fs-5 itemcenter" data-btnmsg="회원특가 한달 배달무료">Slide 1</div>
+        <div class="swiper-slide vh-100 bg-warnig itemcenter" data-btnmsg="구독회원 100원">Slide 2</div>
+        <div class="swiper-slide vh-100 bg-dark itemcenter" data-btnmsg="배송지연안내">Slide 3</div>
+        <div class="swiper-slide vh-100 bg-primary itemcenter" data-btnmsg="단체할인">Slide 4</div>
+        <div class="swiper-slide vh-100 bg-secondary itemcenter" data-btnmsg="B급 상품 특가">Slide 5</div>
+      </div>
+      <div class="indicate position-absolute bottom-0 start-0 end-0 d-flex justify-content-center w-auto zup"></div>
+    </div>
+  </section>
+
+  <div id="about" class="vh-100 itemcenter flex-coulmn">
+    <h2>나의 소개 및 스킬</h2>
   </div>
+
+  <div id="portfolio" class="vh-100 itemcenter flex-coulmn">
+    <h2>프론트 엔드 작업</h2>
+  </div>
+
+  <div id="contact" class="vh-100 itemcenter flex-coulmn">
+    <h2>프론트 엔드 작업</h2>
+  </div>
+  
+
+  <!-- 퀵메뉴 -->
+  <div id="family" class="zup">
+    <h2 class="mb-0"></h2>
+    <ul class="mb-0">
+    </ul>
+    <a href="#top" title="상단으로">top</a>
+    </div>
 </body>
 </html>

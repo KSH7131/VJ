@@ -1,0 +1,44 @@
+// 하단 스타일
+#family {
+  width: 500px;
+  height: auto;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border: 1px solid #000;
+  background-color: yellow;
+
+  h2 {
+    padding: 0.5rem;
+  }
+
+  ul {
+    background-color: rgb(206, 255, 255);
+    position: absolute;
+    bottom: calc(100% - 1px);
+    left: 0;
+    right: 0;
+    border: 1px solid #000;
+    border-bottom: 0;
+    padding: 0 1rem;
+    max-height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+
+    li {
+      margin-bottom: 20px; // 원하는 간격 설정
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      height: 40px; // 위아래 간격을 10px로 설정
+    }
+  }
+
+  &.open ul,
+  &:hover ul {
+    max-height: 300px;
+  }
+}

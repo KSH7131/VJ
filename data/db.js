@@ -22,6 +22,66 @@ const family = {
   ]
 }
 
+const mynavi = [
+  {
+    title: {
+      text: "첫번째",
+      link: "" 
+    },
+    submenus: [
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }  
+    ]
+  },
+  {
+    title: {
+      text: "대메뉴",
+      link: "" 
+    },
+    submenus: [
+      { text: "찾아오는길", link: "" }, 
+      { text: "소메뉴", link: "" },      
+      { text: "소메뉴", link: "" }       
+    ]
+  },
+  {
+    title: {
+      text: "유튜브",
+      link: "https://www.youtube.com/" 
+    },
+    submenus: [
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }  
+    ]
+  },
+  {
+    title: {
+      text: "네이버",
+      link: "https://www.naver.com/" 
+    },
+    submenus: [
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }  
+    ]
+  },
+  {
+    title: {
+      text: "연락",
+      link: "#contact" 
+    },
+    submenus: [
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }, 
+      { text: "소메뉴", link: "" }  
+    ]
+  }
+];
+
+
+
 let familytag = "";
 familytag += `<h2>${family.d1text}</h2><ul>`;
 
@@ -35,3 +95,4 @@ window.addEventListener('load', function () {
   this.document.querySelector("#family")
     .innerHTML = familytag
 })
+

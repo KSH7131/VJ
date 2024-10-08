@@ -1,0 +1,176 @@
+#hd {
+  .inner {
+    h1 {
+      .logo {
+        // svg로고 배경으로 처리
+        background-image: url("https://raw.githubusercontent.com/KSH7131/portfolio_01/150df3059252ff30f82e677c8298dbaf85cf9753/ksh/image/favicon_blue.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        max-width: 150px;
+        width: 30vw;
+
+        @media (min-width: 991px) {
+          background-image: url("https://raw.githubusercontent.com/KSH7131/portfolio_01/150df3059252ff30f82e677c8298dbaf85cf9753/ksh/image/favicon_blue.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          width: 150px;
+          height: 60px;
+        }
+      }
+
+      &:before {
+      }
+
+      .visually-hidden {
+      }
+    } // inner
+
+    nav {
+      a {
+        // 전체 네비게이션 글자색 블랙
+        color: black;
+      }
+
+      > ul {
+        &:before {
+          // 네비게이션 백배경
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 100%;
+          height: 0;
+          // background-color: rgb(255, 255, 255);
+          transition: 0.5s;
+          border-bottom: 1px solid rgb(224, 224, 224);
+        }
+
+        // 백배경 애니메이션
+        &:hover::before {
+          height: 15rem;
+        }
+
+        > li {
+          // 대메뉴 li
+          &:nth-child(2) {
+            // 두번째 li 커스터마이징
+            > a {
+            }
+
+            .position-absolute {
+              right: unset;
+
+              ul {
+                display: inline-block; // d-inline-block
+              }
+            }
+          } // 두번째 li 커스터마이징 마침
+
+          a {
+            // 대메뉴 a태그가 hd 높이를 생성한다.
+            font-size: 1.5em;
+            padding: 30px 1.5rem;
+            margin-right: 0;
+          }
+
+          // 소메뉴들
+          .position-absolute {
+            // background-color: white;
+            left: 0; // start-0
+            right: 0; // end-0
+            top: 100%; // top-100
+            min-width: 150px;
+            padding: 0 1rem;
+            max-height: 0;
+            overflow: hidden; // overflow-hidden
+
+            ul {
+              > li {
+                // 소메뉴 리스트
+                > a {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            > a {
+              color: orange;
+            }
+          }
+        } // 대메뉴
+
+        &:hover {
+          // 모든 소메뉴 노출
+          .position-absolute {
+            transition: 0.5s;
+            max-height: 300px;
+          } // ul 소메뉴
+        }
+      }
+    }
+  }
+}
+
+// 전체 버튼
+#hd_allBtn_ksh {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>');
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+}
+
+#navi {
+  @media (max-width: 991px) {
+    position: absolute;
+
+    .position-absolute {
+      position: unset !important;
+    }
+  }
+}
+
+body.menuOpen {
+  &:after {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  #hd {
+    #hd_allBtn_ksh {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/> </svg>');
+      width: 2rem;
+      height: 2rem;
+      background-size: cover;
+    }
+
+    nav {
+      display: block !important;
+    }
+  }
+}
+
+body.slide-0,
+body.slide-1,
+body.slide-2{
+  #hd{
+    a{
+      color: white !important;
+    }
+  }
+  #mainBanner{
+    .swiper-slide{
+      color: white !important;
+    }
+  }
+}
